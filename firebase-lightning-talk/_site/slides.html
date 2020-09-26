@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/night.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/hybrid.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+### Why use Firebase in an MVP?
+#### Colin Pokowitz
+</script></section><section  data-markdown><script type="text/template">
+### Projects I've Started With Firebase
+
+- Archangel | A Discord bot with many different capabilities
+- Project E | A social networking platform for musicians
+- Camelot | Where I work! Managed Firebase here until eventual move
+</script></section><section ><section data-markdown><script type="text/template">
+### Quick Start
+
+<aside class="notes"><p>typically, you&#39;d be stuck with writing some kind of API back-end when you build out a complex app. here&#39;s how easy it is to get started using Firebase.</p>
+</aside></script></section><section data-markdown><script type="text/template">
+
+![](/assets/quickstart1.png)
+
+</script></section><section data-markdown><script type="text/template">
+
+![](/assets/quickstart2.png)
+
+</script></section><section data-markdown><script type="text/template">
+
+![](/assets/quickstart3.png)
+</script></section></section><section  data-markdown><script type="text/template">
+### Well, what can you do with it?
+
+- Authentication
+- noSQL Databases
+- File Storage
+- Analytics
+
+<aside class="notes"><p>live demo, go through these in order.</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+### Forget back-end systems for an MVP, go with Firebase.
+
+github.com/deadbender/presentations
+
+<aside class="notes"><p>i&#39;m a huge fan of firebase, and I hope everyone else sees how huge these systems can be to get a project off the ground</p>
+</aside></script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
